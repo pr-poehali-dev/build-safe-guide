@@ -8,7 +8,7 @@ const navItems: { id: PageId; label: string; icon: string }[] = [
   { id: "reference", label: "Справочник", icon: "BookOpen" },
   { id: "calculator", label: "Калькулятор", icon: "Calculator" },
   { id: "recommendations", label: "Рекомендации", icon: "ClipboardList" },
-  { id: "authors", label: "Авторы", icon: "Users" },
+  { id: "authors", label: "Литература", icon: "Library" },
 ];
 
 interface NavBarProps {
