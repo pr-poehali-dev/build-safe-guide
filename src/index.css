@@ -96,6 +96,12 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-[#0a0a0f] text-white;
+    font-family: "Golos Text", sans-serif;
+  }
+
+  select option {
+    background-color: #1a1a2e;
+    color: white;
   }
 }
