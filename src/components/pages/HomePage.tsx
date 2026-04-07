@@ -10,7 +10,7 @@ const features = [
     id: "schema" as PageId,
     icon: "GitBranch",
     title: "Интерактивная схема",
-    desc: "Ветвящиеся вопросы, которые ведут к правильному решению шаг за шагом",
+    desc: "7 ключевых вопросов о грунте, материалах, ветре и сейсмике — на выходе пошаговый план",
     color: "from-blue-500 to-cyan-400",
     border: "border-blue-500/30",
     bg: "bg-blue-500/10",
@@ -55,23 +55,22 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
 
         <div className="relative max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/40 bg-orange-500/10 text-orange-400 text-xs font-medium mb-8 animate-fade-in">
-            <Icon name="Zap" size={12} />
-            Интерактивная инструкция по строительству
+            <Icon name="Building2" size={12} />
+            Небоскрёбы и высотные здания
           </div>
 
           <h1 className="font-oswald text-5xl md:text-7xl font-bold leading-tight mb-6 animate-fade-in"
             style={{ animationDelay: "0.1s" }}>
-            <span className="text-white">Проектируй</span>
+            <span className="text-white">Строй</span>
             <br />
             <span className="bg-gradient-to-r from-orange-400 via-amber-400 to-orange-300 bg-clip-text text-transparent">
-              правильно
+              вертикально
             </span>
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}>
-            Полный инструмент для расчёта строительных нагрузок, глубины фундамента
-            и проверки параметров безопасности конструкций
+            Интерактивная инструкция по безопасному проектированию небоскрёбов и высотных зданий — грунт, материалы, ветер, сейсмика, пошаговый план действий
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in"
@@ -98,10 +97,10 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
       <section className="px-4 pb-16">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "15+", label: "Формул расчёта" },
-            { value: "50+", label: "Нормативов" },
-            { value: "5", label: "Разделов" },
-            { value: "100%", label: "Бесплатно" },
+            { value: "8", label: "Фаз строительства" },
+            { value: "60+", label: "Конкретных действий" },
+            { value: "4", label: "Сценария рисков" },
+            { value: "100%", label: "По нормативам РФ" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-4 rounded-xl border border-white/10 bg-white/3">
               <div className="font-oswald text-3xl font-bold text-orange-400 mb-1">{stat.value}</div>
