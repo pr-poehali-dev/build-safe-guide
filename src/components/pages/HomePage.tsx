@@ -136,6 +136,10 @@ const HomePage = ({ onNavigate }: HomePageProps) => {
           </div>
         </div>
       </section>
+
+      <div className="text-center pb-10">
+        <span className="text-white/20 text-xs">Романова С.</span>
+      </div>
     </div>
   );
 };
