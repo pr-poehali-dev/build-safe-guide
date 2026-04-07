@@ -5,6 +5,7 @@ interface Question {
   id: string;
   text: string;
   subtitle?: string;
+  hint?: string;
   options: { label: string; desc?: string; next: string; icon?: string }[];
 }
 
@@ -67,13 +68,14 @@ const questions: Record<string, Question> = {
   },
   q_seismic: {
     id: "q_seismic",
-    text: "Какова сейсмическая активность района?",
-    subtitle: "По картам ОСР-2015 / Еврокод 8 — определяет тип конструктивной системы",
+    text: "Насколько сейсмически активен ваш регион?",
+    subtitle: "Сейсмическая активность — это частота и сила землетрясений в районе строительства. Измеряется в баллах: чем выше балл, тем сильнее может трястись земля. Узнать балл своего города можно на сайте МЧС или в картах ОСР-2015 (Общее сейсмическое районирование России).",
+    hint: "Не знаете свой балл? Москва, СПб, большинство городов центральной России — менее 6 баллов. Краснодар, Ставрополь — 6–7. Сочи, Владикавказ, Алтай — 7–8. Камчатка, Сахалин, Курилы — 8–9 и выше.",
     options: [
-      { label: "Менее 6 баллов (MSK)", desc: "Асейсмичный район — нет особых требований", next: "q_wind", icon: "ShieldCheck" },
-      { label: "6–7 баллов", desc: "Умеренная сейсмика — усиленное армирование", next: "q_wind", icon: "Activity" },
-      { label: "7–8 баллов", desc: "Высокая сейсмика — специальная конструктивная схема", next: "q_wind", icon: "Zap" },
-      { label: "8–9 баллов и выше", desc: "Экстремальная сейсмика — максимальная защита", next: "q_wind", icon: "AlertOctagon" },
+      { label: "Менее 6 баллов", desc: "Москва, Санкт-Петербург, Центральная Россия — землетрясений практически нет", next: "q_wind", icon: "ShieldCheck" },
+      { label: "6–7 баллов", desc: "Краснодарский край, Ставрополь, часть Сибири — редкие слабые толчки", next: "q_wind", icon: "Activity" },
+      { label: "7–8 баллов", desc: "Сочи, Владикавказ, Алтай, Байкал — ощутимые землетрясения", next: "q_wind", icon: "Zap" },
+      { label: "8–9 баллов и выше", desc: "Камчатка, Сахалин, Курилы — сильные регулярные землетрясения", next: "q_wind", icon: "AlertOctagon" },
     ],
   },
   q_wind: {
@@ -695,6 +697,12 @@ const SchemaPage = () => {
               <h2 className="font-oswald text-2xl font-bold text-white leading-tight mb-2">{currentQuestion.text}</h2>
               {currentQuestion.subtitle && (
                 <p className="text-white/35 text-sm">{currentQuestion.subtitle}</p>
+              )}
+              {currentQuestion.hint && (
+                <div className="mt-3 flex items-start gap-2.5 px-3 py-2.5 rounded-xl bg-blue-500/8 border border-blue-500/20">
+                  <Icon name="Lightbulb" size={14} className="text-blue-400 flex-shrink-0 mt-0.5" />
+                  <p className="text-blue-300/70 text-xs leading-relaxed">{currentQuestion.hint}</p>
+                </div>
               )}
             </div>
 
