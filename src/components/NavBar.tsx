@@ -23,8 +23,8 @@ const NavBar = ({ currentPage, onNavigate }: NavBarProps) => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center">
-            <Icon name="Layers" size={16} className="text-black" />
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600 to-cyan-400 flex items-center justify-center">
+            <Icon name="Layers" size={16} className="text-white" />
           </div>
           <span className="font-oswald text-lg font-bold tracking-widest text-white uppercase">СтройРасчёт</span>
         </div>
@@ -37,7 +37,7 @@ const NavBar = ({ currentPage, onNavigate }: NavBarProps) => {
               onClick={() => onNavigate(item.id)}
               className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                 currentPage === item.id
-                  ? "bg-orange-500/20 text-orange-400 border border-orange-500/40"
+                  ? "bg-blue-500/20 text-blue-400 border border-blue-500/40"
                   : "text-white/60 hover:text-white hover:bg-white/5"
               }`}
             >
@@ -65,7 +65,7 @@ const NavBar = ({ currentPage, onNavigate }: NavBarProps) => {
               onClick={() => { onNavigate(item.id); setMenuOpen(false); }}
               className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 text-left ${
                 currentPage === item.id
-                  ? "bg-orange-500/20 text-orange-400"
+                  ? "bg-blue-500/20 text-blue-400"
                   : "text-white/60 hover:text-white hover:bg-white/5"
               }`}
             >

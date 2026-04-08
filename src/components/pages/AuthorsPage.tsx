@@ -194,7 +194,7 @@ const scientists = [
 ];
 
 const colorMap: Record<string, { border: string; bg: string; text: string; badge: string }> = {
-  orange: { border: "border-orange-500/25", bg: "bg-orange-500/6", text: "text-orange-400", badge: "bg-orange-500/15 text-orange-300 border-orange-500/25" },
+  orange: { border: "border-blue-500/25", bg: "bg-blue-500/6", text: "text-blue-400", badge: "bg-blue-500/15 text-blue-300 border-blue-500/25" },
   red: { border: "border-red-500/25", bg: "bg-red-500/6", text: "text-red-400", badge: "bg-red-500/15 text-red-300 border-red-500/25" },
   blue: { border: "border-blue-500/25", bg: "bg-blue-500/6", text: "text-blue-400", badge: "bg-blue-500/15 text-blue-300 border-blue-500/25" },
   emerald: { border: "border-emerald-500/25", bg: "bg-emerald-500/6", text: "text-emerald-400", badge: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25" },
@@ -229,13 +229,13 @@ const AuthorsPage = () => {
               onClick={() => { setActiveTab(t.id); setExpanded(null); }}
               className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium transition-all duration-200 ${
                 activeTab === t.id
-                  ? "bg-orange-500/15 border-orange-500/40 text-orange-400"
+                  ? "bg-blue-500/15 border-blue-500/40 text-blue-400"
                   : "border-white/10 text-white/50 hover:text-white hover:border-white/20"
               }`}
             >
               <Icon name={t.icon} size={14} />
               {t.label}
-              <span className={`text-xs px-1.5 py-0.5 rounded-md ${activeTab === t.id ? "bg-orange-500/20 text-orange-300" : "bg-white/8 text-white/30"}`}>
+              <span className={`text-xs px-1.5 py-0.5 rounded-md ${activeTab === t.id ? "bg-blue-500/20 text-blue-300" : "bg-white/8 text-white/30"}`}>
                 {t.count}
               </span>
             </button>

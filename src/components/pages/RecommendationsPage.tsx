@@ -58,25 +58,25 @@ const recommendations = [
 ];
 
 const colorMap: Record<string, { border: string; bg: string; text: string; dot: string }> = {
-  orange: { border: "border-orange-500/30", bg: "bg-orange-500/8", text: "text-orange-400", dot: "bg-orange-500" },
+  orange: { border: "border-teal-500/30", bg: "bg-teal-500/8", text: "text-teal-400", dot: "bg-teal-500" },
   blue: { border: "border-blue-500/30", bg: "bg-blue-500/8", text: "text-blue-400", dot: "bg-blue-500" },
   violet: { border: "border-violet-500/30", bg: "bg-violet-500/8", text: "text-violet-400", dot: "bg-violet-500" },
 };
 
 const DrawingFoundation = () => (
   <svg viewBox="0 0 400 200" className="w-full h-auto" fill="none">
-    <rect x="20" y="60" width="360" height="30" rx="3" fill="#f97316" fillOpacity="0.15" stroke="#f97316" strokeOpacity="0.5" strokeWidth="1.5" />
-    <text x="200" y="80" textAnchor="middle" fill="#f97316" fontSize="11" fontFamily="monospace">Лента 400×300 мм (над землёй)</text>
-    <rect x="20" y="90" width="360" height="80" rx="3" fill="#f97316" fillOpacity="0.08" stroke="#f97316" strokeOpacity="0.3" strokeWidth="1" strokeDasharray="6 3" />
-    <text x="200" y="135" textAnchor="middle" fill="#f97316" fillOpacity="0.7" fontSize="11" fontFamily="monospace">Лента 400×1200 мм (в земле)</text>
+    <rect x="20" y="60" width="360" height="30" rx="3" fill="#14b8a6" fillOpacity="0.15" stroke="#14b8a6" strokeOpacity="0.5" strokeWidth="1.5" />
+    <text x="200" y="80" textAnchor="middle" fill="#14b8a6" fontSize="11" fontFamily="monospace">Лента 400×300 мм (над землёй)</text>
+    <rect x="20" y="90" width="360" height="80" rx="3" fill="#14b8a6" fillOpacity="0.08" stroke="#14b8a6" strokeOpacity="0.3" strokeWidth="1" strokeDasharray="6 3" />
+    <text x="200" y="135" textAnchor="middle" fill="#14b8a6" fillOpacity="0.7" fontSize="11" fontFamily="monospace">Лента 400×1200 мм (в земле)</text>
     <line x1="20" y1="92" x2="20" y2="170" stroke="#ffffff" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="4 4" />
     <line x1="380" y1="92" x2="380" y2="170" stroke="#ffffff" strokeOpacity="0.2" strokeWidth="1" strokeDasharray="4 4" />
     <rect x="20" y="170" width="360" height="15" fill="#ffffff" fillOpacity="0.05" stroke="#ffffff" strokeOpacity="0.15" strokeWidth="1" />
     <text x="200" y="182" textAnchor="middle" fill="#ffffff" fillOpacity="0.3" fontSize="10" fontFamily="monospace">Щебень 150 мм</text>
     <line x1="0" y1="90" x2="400" y2="90" stroke="#ffffff" strokeOpacity="0.15" strokeWidth="1" strokeDasharray="8 4" />
     <text x="5" y="88" fill="#ffffff" fillOpacity="0.3" fontSize="9" fontFamily="monospace">±0.000 Уровень земли</text>
-    <line x1="0" y1="170" x2="20" y2="170" stroke="#f97316" strokeOpacity="0.4" strokeWidth="1" />
-    <text x="5" y="168" fill="#f97316" fillOpacity="0.6" fontSize="9" fontFamily="monospace">-1.500</text>
+    <line x1="0" y1="170" x2="20" y2="170" stroke="#14b8a6" strokeOpacity="0.4" strokeWidth="1" />
+    <text x="5" y="168" fill="#14b8a6" fillOpacity="0.6" fontSize="9" fontFamily="monospace">-1.500</text>
     <line x1="60" y1="100" x2="60" y2="165" stroke="#60a5fa" strokeOpacity="0.5" strokeWidth="1" strokeDasharray="3 2" />
     <circle cx="60" cy="102" r="2" fill="#60a5fa" fillOpacity="0.7" />
     <circle cx="60" cy="163" r="2" fill="#60a5fa" fillOpacity="0.7" />
@@ -105,10 +105,10 @@ const DrawingRoof = () => (
   <svg viewBox="0 0 400 200" className="w-full h-auto" fill="none">
     <polygon points="200,20 30,160 370,160" fill="#a78bfa" fillOpacity="0.1" stroke="#a78bfa" strokeOpacity="0.5" strokeWidth="1.5" />
     <line x1="200" y1="20" x2="200" y2="160" stroke="#a78bfa" strokeOpacity="0.3" strokeWidth="1" strokeDasharray="5 3" />
-    <line x1="115" y1="90" x2="200" y2="20" stroke="#f97316" strokeOpacity="0.6" strokeWidth="2" />
-    <line x1="285" y1="90" x2="200" y2="20" stroke="#f97316" strokeOpacity="0.6" strokeWidth="2" />
+    <line x1="115" y1="90" x2="200" y2="20" stroke="#3b82f6" strokeOpacity="0.6" strokeWidth="2" />
+    <line x1="285" y1="90" x2="200" y2="20" stroke="#3b82f6" strokeOpacity="0.6" strokeWidth="2" />
     <text x="200" y="14" textAnchor="middle" fill="#a78bfa" fontSize="9" fontFamily="monospace">Конёк</text>
-    <text x="100" y="110" fill="#f97316" fillOpacity="0.7" fontSize="9" fontFamily="monospace">Стропила 50×200</text>
+    <text x="100" y="110" fill="#3b82f6" fillOpacity="0.7" fontSize="9" fontFamily="monospace">Стропила 50×200</text>
     <text x="30" y="178" fill="#ffffff" fillOpacity="0.4" fontSize="9" fontFamily="monospace">Уклон 30–45° · Металлочерепица · Минвата 200 мм</text>
     <line x1="200" y1="160" x2="260" y2="160" stroke="#ffffff" strokeOpacity="0.2" strokeWidth="1" />
     <line x1="260" y1="20" x2="260" y2="160" stroke="#ffffff" strokeOpacity="0.15" strokeWidth="1" strokeDasharray="4 4" />

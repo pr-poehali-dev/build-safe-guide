@@ -110,7 +110,7 @@ const categories = [
 
 const colorMap: Record<string, { border: string; bg: string; text: string; badge: string }> = {
   blue: { border: "border-blue-500/30", bg: "bg-blue-500/8", text: "text-blue-400", badge: "bg-blue-500/20 text-blue-300" },
-  orange: { border: "border-orange-500/30", bg: "bg-orange-500/8", text: "text-orange-400", badge: "bg-orange-500/20 text-orange-300" },
+  orange: { border: "border-teal-500/30", bg: "bg-teal-500/8", text: "text-teal-400", badge: "bg-teal-500/20 text-teal-300" },
   violet: { border: "border-violet-500/30", bg: "bg-violet-500/8", text: "text-violet-400", badge: "bg-violet-500/20 text-violet-300" },
   emerald: { border: "border-emerald-500/30", bg: "bg-emerald-500/8", text: "text-emerald-400", badge: "bg-emerald-500/20 text-emerald-300" },
 };
