@@ -442,15 +442,15 @@ const results: Record<string, Result> = {
 ───────────────────────────────────────────── */
 const colorMap: Record<string, { border: string; bg: string; text: string; badge: string; dot: string }> = {
   blue: { border: "border-blue-500/40", bg: "bg-blue-500/8", text: "text-blue-400", badge: "bg-blue-500/20 text-blue-300", dot: "bg-blue-500" },
-  orange: { border: "border-orange-500/40", bg: "bg-orange-500/8", text: "text-orange-400", badge: "bg-orange-500/20 text-orange-300", dot: "bg-orange-500" },
-  red: { border: "border-red-500/40", bg: "bg-red-500/8", text: "text-red-400", badge: "bg-red-500/20 text-red-300", dot: "bg-red-500" },
-  violet: { border: "border-violet-500/40", bg: "bg-violet-500/8", text: "text-violet-400", badge: "bg-violet-500/20 text-violet-300", dot: "bg-violet-500" },
+  orange: { border: "border-teal-600/40", bg: "bg-teal-600/8", text: "text-teal-400", badge: "bg-teal-600/20 text-teal-300", dot: "bg-teal-600" },
+  red: { border: "border-blue-700/40", bg: "bg-blue-900/20", text: "text-blue-300", badge: "bg-blue-800/30 text-blue-200", dot: "bg-blue-700" },
+  violet: { border: "border-emerald-700/40", bg: "bg-emerald-900/15", text: "text-emerald-400", badge: "bg-emerald-800/25 text-emerald-300", dot: "bg-emerald-700" },
 };
 
 const riskLabels: Record<string, { label: string; color: string }> = {
   low: { label: "Низкий риск", color: "text-emerald-400 bg-emerald-500/15 border-emerald-500/30" },
   medium: { label: "Средний риск", color: "text-blue-400 bg-blue-500/15 border-blue-500/30" },
-  high: { label: "Высокий риск", color: "text-orange-400 bg-orange-500/15 border-orange-500/30" },
+  high: { label: "Высокий риск", color: "text-teal-400 bg-teal-600/15 border-teal-600/30" },
   extreme: { label: "Экстремальный риск", color: "text-red-400 bg-red-500/15 border-red-500/30" },
 };
 
@@ -500,7 +500,7 @@ const ResultView = ({ result, onReset }: { result: Result; onReset: () => void }
       {/* Steps */}
       <div>
         <h3 className="font-oswald text-xl font-bold text-white mb-4 flex items-center gap-2">
-          <Icon name="ListChecks" size={18} className="text-orange-400" />
+          <Icon name="ListChecks" size={18} className="text-blue-400" />
           Пошаговый план действий
           <span className="text-xs font-normal text-white/30 ml-1">({result.steps.length} фаз)</span>
         </h3>
@@ -513,7 +513,7 @@ const ResultView = ({ result, onReset }: { result: Result; onReset: () => void }
                 key={i}
                 className={`rounded-xl border transition-all duration-200 ${
                   isOpen
-                    ? step.critical ? "border-orange-500/40 bg-orange-500/5" : "border-white/20 bg-white/5"
+                    ? step.critical ? "border-emerald-700/40 bg-emerald-900/10" : "border-white/20 bg-white/5"
                     : "border-white/8 bg-white/2 hover:border-white/15"
                 }`}
               >
@@ -522,7 +522,7 @@ const ResultView = ({ result, onReset }: { result: Result; onReset: () => void }
                   onClick={() => setOpenStep(isOpen ? null : i)}
                 >
                   <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 text-xs font-bold font-oswald ${
-                    step.critical ? "bg-orange-500/20 text-orange-400 border border-orange-500/30" : "bg-white/8 text-white/50 border border-white/10"
+                    step.critical ? "bg-emerald-800/25 text-emerald-400 border border-emerald-700/30" : "bg-white/8 text-white/50 border border-white/10"
                   }`}>
                     {i + 1}
                   </div>
@@ -530,7 +530,7 @@ const ResultView = ({ result, onReset }: { result: Result; onReset: () => void }
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-white/30 text-xs font-medium">{step.phase}</span>
                       {step.critical && (
-                        <span className="text-orange-400 text-xs font-medium bg-orange-500/10 px-1.5 py-0.5 rounded border border-orange-500/20">КРИТИЧНО</span>
+                        <span className="text-emerald-400 text-xs font-medium bg-emerald-800/20 px-1.5 py-0.5 rounded border border-emerald-700/25">КРИТИЧНО</span>
                       )}
                     </div>
                     <div className="font-oswald text-base font-bold text-white leading-tight">{step.title}</div>
@@ -554,7 +554,7 @@ const ResultView = ({ result, onReset }: { result: Result; onReset: () => void }
                       {step.actions.map((action, j) => (
                         <div key={j} className="flex items-start gap-3 p-2.5 rounded-lg bg-white/3 border border-white/5">
                           <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 text-xs font-bold ${
-                            step.critical ? "bg-orange-500/20 text-orange-400" : "bg-white/8 text-white/40"
+                            step.critical ? "bg-emerald-800/25 text-emerald-400" : "bg-white/8 text-white/40"
                           }`}>
                             {j + 1}
                           </div>
@@ -646,7 +646,7 @@ const SchemaPage = () => {
     <div className="min-h-screen px-4 py-12">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/8 text-orange-400 text-xs font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-600/30 bg-blue-900/15 text-blue-400 text-xs font-medium mb-4">
             <Icon name="Building2" size={12} />
             Небоскрёбы и высотные здания
           </div>
@@ -660,13 +660,13 @@ const SchemaPage = () => {
             <span className="text-white/30 text-xs">
               {resultId ? "Анализ завершён" : `Вопрос ${step} из ${TOTAL_STEPS}`}
             </span>
-            <span className={`text-xs font-medium ${resultId ? "text-emerald-400" : "text-orange-400"}`}>
+            <span className={`text-xs font-medium ${resultId ? "text-emerald-400" : "text-blue-400"}`}>
               {progress}%
             </span>
           </div>
           <div className="h-1.5 bg-white/8 rounded-full overflow-hidden">
             <div
-              className={`h-full rounded-full transition-all duration-500 ${resultId ? "bg-emerald-500" : "bg-gradient-to-r from-orange-500 to-amber-400"}`}
+              className={`h-full rounded-full transition-all duration-500 ${resultId ? "bg-emerald-600" : "bg-gradient-to-r from-blue-700 to-blue-500"}`}
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -677,7 +677,7 @@ const SchemaPage = () => {
           <div className="mb-6 flex flex-wrap gap-2">
             {answers.map((a, i) => (
               <div key={i} className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/5 border border-white/8 text-xs text-white/40">
-                <div className="w-1.5 h-1.5 rounded-full bg-orange-500/60" />
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500/60" />
                 {a.answer}
               </div>
             ))}
@@ -689,10 +689,10 @@ const SchemaPage = () => {
           <div className="rounded-2xl border border-white/12 bg-white/3 p-7 animate-fade-in">
             <div className="mb-7">
               <div className="flex items-center gap-2 mb-2">
-                <div className="w-6 h-6 rounded-md bg-orange-500/20 border border-orange-500/30 flex items-center justify-center">
-                  <span className="text-orange-400 text-xs font-bold">{step}</span>
+                <div className="w-6 h-6 rounded-md bg-blue-700/25 border border-blue-600/30 flex items-center justify-center">
+                  <span className="text-blue-400 text-xs font-bold">{step}</span>
                 </div>
-                <span className="text-orange-400/60 text-xs uppercase tracking-wider font-medium">Вопрос {step}</span>
+                <span className="text-blue-400/60 text-xs uppercase tracking-wider font-medium">Вопрос {step}</span>
               </div>
               <h2 className="font-oswald text-2xl font-bold text-white leading-tight mb-2">{currentQuestion.text}</h2>
               {currentQuestion.subtitle && (
@@ -711,11 +711,11 @@ const SchemaPage = () => {
                 <button
                   key={opt.label}
                   onClick={() => handleOption(opt.next, opt.label)}
-                  className="flex items-center gap-3 p-4 rounded-xl border border-white/8 bg-white/2 text-left hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-150 group"
+                  className="flex items-center gap-3 p-4 rounded-xl border border-white/8 bg-white/2 text-left hover:border-blue-600/50 hover:bg-blue-900/10 transition-all duration-150 group"
                 >
                   {opt.icon && (
-                    <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/12 transition-colors">
-                      <Icon name={opt.icon} size={18} className="text-white/40 group-hover:text-orange-400 transition-colors" />
+                    <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-700/15 transition-colors">
+                      <Icon name={opt.icon} size={18} className="text-white/40 group-hover:text-blue-400 transition-colors" />
                     </div>
                   )}
                   <div className="flex-1 min-w-0">
@@ -724,7 +724,7 @@ const SchemaPage = () => {
                       <div className="text-white/30 text-xs mt-0.5">{opt.desc}</div>
                     )}
                   </div>
-                  <Icon name="ChevronRight" size={15} className="text-white/15 group-hover:text-orange-400 transition-colors flex-shrink-0" />
+                  <Icon name="ChevronRight" size={15} className="text-white/15 group-hover:text-blue-400 transition-colors flex-shrink-0" />
                 </button>
               ))}
             </div>
