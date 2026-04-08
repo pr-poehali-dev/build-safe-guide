@@ -195,10 +195,10 @@ const scientists = [
 
 const colorMap: Record<string, { border: string; bg: string; text: string; badge: string }> = {
   orange: { border: "border-blue-500/25", bg: "bg-blue-500/6", text: "text-blue-400", badge: "bg-blue-500/15 text-blue-300 border-blue-500/25" },
-  red: { border: "border-red-500/25", bg: "bg-red-500/6", text: "text-red-400", badge: "bg-red-500/15 text-red-300 border-red-500/25" },
+  red: { border: "border-blue-700/25", bg: "bg-blue-900/10", text: "text-blue-300", badge: "bg-blue-800/20 text-blue-200 border-blue-700/25" },
   blue: { border: "border-blue-500/25", bg: "bg-blue-500/6", text: "text-blue-400", badge: "bg-blue-500/15 text-blue-300 border-blue-500/25" },
   emerald: { border: "border-emerald-500/25", bg: "bg-emerald-500/6", text: "text-emerald-400", badge: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25" },
-  violet: { border: "border-violet-500/25", bg: "bg-violet-500/6", text: "text-violet-400", badge: "bg-violet-500/15 text-violet-300 border-violet-500/25" },
+  violet: { border: "border-emerald-600/25", bg: "bg-emerald-600/6", text: "text-emerald-400", badge: "bg-emerald-600/15 text-emerald-300 border-emerald-600/25" },
 };
 
 const tabs: { id: TabId; label: string; icon: string; count: number }[] = [

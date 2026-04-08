@@ -60,7 +60,7 @@ const recommendations = [
 const colorMap: Record<string, { border: string; bg: string; text: string; dot: string }> = {
   orange: { border: "border-teal-500/30", bg: "bg-teal-500/8", text: "text-teal-400", dot: "bg-teal-500" },
   blue: { border: "border-blue-500/30", bg: "bg-blue-500/8", text: "text-blue-400", dot: "bg-blue-500" },
-  violet: { border: "border-violet-500/30", bg: "bg-violet-500/8", text: "text-violet-400", dot: "bg-violet-500" },
+  violet: { border: "border-emerald-600/30", bg: "bg-emerald-600/8", text: "text-emerald-400", dot: "bg-emerald-600" },
 };
 
 const DrawingFoundation = () => (
@@ -88,14 +88,14 @@ const DrawingWalls = () => (
   <svg viewBox="0 0 400 200" className="w-full h-auto" fill="none">
     <rect x="30" y="20" width="50" height="160" fill="#60a5fa" fillOpacity="0.15" stroke="#60a5fa" strokeOpacity="0.5" strokeWidth="1.5" />
     <text x="55" y="108" textAnchor="middle" fill="#60a5fa" fontSize="9" fontFamily="monospace" transform="rotate(-90,55,108)">Кирпич 250</text>
-    <rect x="80" y="20" width="40" height="160" fill="#a78bfa" fillOpacity="0.15" stroke="#a78bfa" strokeOpacity="0.4" strokeWidth="1" />
-    <text x="100" y="108" textAnchor="middle" fill="#a78bfa" fontSize="9" fontFamily="monospace" transform="rotate(-90,100,108)">Мин.вата 100</text>
+    <rect x="80" y="20" width="40" height="160" fill="#22c55e" fillOpacity="0.15" stroke="#22c55e" strokeOpacity="0.4" strokeWidth="1" />
+    <text x="100" y="108" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace" transform="rotate(-90,100,108)">Мин.вата 100</text>
     <rect x="120" y="20" width="30" height="160" fill="#60a5fa" fillOpacity="0.08" stroke="#60a5fa" strokeOpacity="0.2" strokeWidth="1" />
     <text x="135" y="108" textAnchor="middle" fill="#60a5fa" fontSize="8" fontFamily="monospace" transform="rotate(-90,135,108)">Облицовка</text>
     <line x1="160" y1="20" x2="400" y2="20" stroke="#ffffff" strokeOpacity="0.05" strokeWidth="1" />
     <text x="175" y="60" fill="#ffffff" fillOpacity="0.5" fontSize="11" fontFamily="monospace">Состав стены:</text>
     <text x="175" y="85" fill="#60a5fa" fillOpacity="0.8" fontSize="10" fontFamily="monospace">• Кирпич М150 — 250 мм</text>
-    <text x="175" y="105" fill="#a78bfa" fillOpacity="0.8" fontSize="10" fontFamily="monospace">• Минвата λ=0.04 — 100 мм</text>
+    <text x="175" y="105" fill="#22c55e" fillOpacity="0.8" fontSize="10" fontFamily="monospace">• Минвата λ=0.04 — 100 мм</text>
     <text x="175" y="125" fill="#60a5fa" fillOpacity="0.6" fontSize="10" fontFamily="monospace">• Облицовочный кирпич</text>
     <text x="175" y="150" fill="#ffffff" fillOpacity="0.3" fontSize="10" fontFamily="monospace">Итого: R = 3.5 м²·К/Вт</text>
   </svg>
@@ -103,11 +103,11 @@ const DrawingWalls = () => (
 
 const DrawingRoof = () => (
   <svg viewBox="0 0 400 200" className="w-full h-auto" fill="none">
-    <polygon points="200,20 30,160 370,160" fill="#a78bfa" fillOpacity="0.1" stroke="#a78bfa" strokeOpacity="0.5" strokeWidth="1.5" />
-    <line x1="200" y1="20" x2="200" y2="160" stroke="#a78bfa" strokeOpacity="0.3" strokeWidth="1" strokeDasharray="5 3" />
+    <polygon points="200,20 30,160 370,160" fill="#22c55e" fillOpacity="0.1" stroke="#22c55e" strokeOpacity="0.5" strokeWidth="1.5" />
+    <line x1="200" y1="20" x2="200" y2="160" stroke="#22c55e" strokeOpacity="0.3" strokeWidth="1" strokeDasharray="5 3" />
     <line x1="115" y1="90" x2="200" y2="20" stroke="#3b82f6" strokeOpacity="0.6" strokeWidth="2" />
     <line x1="285" y1="90" x2="200" y2="20" stroke="#3b82f6" strokeOpacity="0.6" strokeWidth="2" />
-    <text x="200" y="14" textAnchor="middle" fill="#a78bfa" fontSize="9" fontFamily="monospace">Конёк</text>
+    <text x="200" y="14" textAnchor="middle" fill="#22c55e" fontSize="9" fontFamily="monospace">Конёк</text>
     <text x="100" y="110" fill="#3b82f6" fillOpacity="0.7" fontSize="9" fontFamily="monospace">Стропила 50×200</text>
     <text x="30" y="178" fill="#ffffff" fillOpacity="0.4" fontSize="9" fontFamily="monospace">Уклон 30–45° · Металлочерепица · Минвата 200 мм</text>
     <line x1="200" y1="160" x2="260" y2="160" stroke="#ffffff" strokeOpacity="0.2" strokeWidth="1" />

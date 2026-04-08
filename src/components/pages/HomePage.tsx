@@ -38,9 +38,9 @@ const features = [
     icon: "ClipboardList",
     title: "Рекомендации",
     desc: "Финальные рекомендации и чертежи на основе ваших данных",
-    color: "from-violet-500 to-purple-400",
-    border: "border-violet-500/30",
-    bg: "bg-violet-500/10",
+    color: "from-emerald-600 to-green-500",
+    border: "border-emerald-600/30",
+    bg: "bg-emerald-600/10",
   },
 ];
 
